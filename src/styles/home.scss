@@ -1,0 +1,24 @@
+.home{
+    background-color: #a7bcff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .container {
+        border: none;
+        border-radius: 10px;
+        width: 65%;
+        height: 80%;
+        display: flex;
+        overflow: hidden;
+        @include boxShadow;
+        @include mobile{
+            width: 90%;
+        }
+    }
+    ._dfaicjcc{
+        display: flex;
+        justify-content: center;
+    }
+}

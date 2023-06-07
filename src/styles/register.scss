@@ -1,0 +1,80 @@
+.formContainer{
+    // background-color: #A68EFE;
+    height: 100vh;
+    @include dff-aic-jcc;
+    background-image: linear-gradient(125deg,#2c3e50,#27ae60,#2980b9,#e74c3c,#8e44ad);
+    background-size: 400%;
+    animation: backgroundPosition 40s infinite;
+    @keyframes backgroundPosition {
+        0% {
+            background-position: 0% 50%;   
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+    .formWrapper{
+        @include transformPixel(padding, 50, 50);
+        @include dff-aic-jcc();
+        background-color: #ffffff;
+        flex-direction: column;
+        border-radius: 10px;
+        @include boxShadow;
+        .logo{
+            color: #5d5b5d;
+            font-weight: bold;
+            @include transformPixel(font-size, 24, 24);
+        }
+        .title{
+            color: #5d5b5d;
+            @include transformPixel(font-size, 12, 12);
+        }
+        .registerForm{
+            @include dff-aic-jcc;
+            flex-direction: column;
+            @include transformPixel(gap, 15, 15);
+            input{
+                @include transformPixel(padding, 15, 15);
+                width: 90%;
+                border: none;
+                border-bottom: 1px solid #a7bcff;
+                &::placeholder{
+                    color: rgb(175, 175, 175);
+                }
+            }
+            label{
+                display: flex;
+                img{
+                    @include transformPixel(width, 40, 40);
+                    @include transformPixel(margin-right, 10, 10);
+                }
+                align-self: baseline;
+            }
+            button{
+                background-color: #7b96ec;
+                color: #ffffff;
+                width: 100%;
+                @include transformPixel(padding, 10, 10);
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+            }
+            .avatar{
+                border-radius: 5px;
+            }
+        }
+        .tips{
+            color: #5d5b8d;
+            @include transformPixel(font-size, 12, 12);
+            @include transformPixel(margin-top, 10, 10);
+            cursor: pointer;
+        }
+        .errorMessage{
+            color: #ccc;
+            font-style: italic;
+        }
+    }
+}

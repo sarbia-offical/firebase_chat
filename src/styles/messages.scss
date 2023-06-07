@@ -1,0 +1,7 @@
+.messages {
+    background-color: #ddddf7;
+    @include transformPixel(padding, 10, 10);
+    height: calc(100% - 100px);
+    overflow: scroll;
+    overflow-x: hidden;
+}

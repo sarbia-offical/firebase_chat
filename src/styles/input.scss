@@ -1,0 +1,50 @@
+.input {
+    flex: 1;
+    @include transformPixel(padding, 10, 5);
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      width: 80%;
+      border: none;
+      outline: none;
+      color: #2f2d52;
+      @include transformPixel(font-size, 18, 10);
+      &::placeholder {
+        color: lightgray;
+      }
+      @include mobile{
+        width: 70%;
+      }
+    }
+
+    .send {
+      display: flex;
+      align-items: center;
+      @include transformPixel(gap, 10, 10);
+      img {
+        @include transformPixel(height, 24, 10);
+        @include transformPixel(width, 24, 10);
+        cursor: pointer;
+      }
+      label{
+        display: flex;
+        align-items: center;
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        @include pc{
+          padding: vw(10) vw(15);
+        }
+        @include mobile{
+          padding: vwm(5) vwm(5);
+        }
+        background-color: #8da4f1;
+        cursor: pointer;
+      }
+    }
+  }

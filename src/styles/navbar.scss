@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #2f2d52;
+    @include transformPixel(height, 50, 20);
+    @include transformPixel(padding, 10, 10);
+    justify-content: space-between;
+    color: #ddddf7;
+
+    .logo {
+      font-weight: bold;
+      @include mobile{
+        display: none;
+      }
+    }
+
+    .user {
+      display: flex;
+      @include transformPixel(gap, 10, 10);
+      @include mobile{
+        align-items: center;
+      }
+      img {
+        background-color: #ddddf7;
+        @include transformPixel(height, 24, 24);
+        @include transformPixel(width, 24, 24);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      button {
+        background-color: #5d5b8d;
+        color: #ddddf7;
+        @include transformPixel(font-size, 10, 10);
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }

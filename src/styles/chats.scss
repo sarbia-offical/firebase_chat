@@ -1,0 +1,13 @@
+.chats{
+  .userChat {
+    @include userChat;
+  }
+  .noLatestMessage{
+    p{
+      @include transformPixel(margin-top, 50, 50);
+      color: #cccccc;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+}
